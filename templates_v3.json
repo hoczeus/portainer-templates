@@ -4,10 +4,43 @@
     {
       "id": 1,
       "type": 1,
+      "name": "cloudflare-ddns",
+      "title": "Cloudflare DDNS",
+      "description": "A robust Cloudflare DDNS updater with a small footprint. The program will detect your machine's public IP addresses and update DNS records using the Cloudflare API.",
+      "logo": "https://raw.githubusercontent.com/hoczeus/portainer-templates/main/img/svg/Cloudflare.svg",
+      "image": "favonia/cloudflare-ddns:latest",
+      "categories": [
+        "Dns",
+        "Tools"
+      ],
+      "env": [
+        {
+          "name": "CLOUDFLARE_API_TOKEN",
+          "label": "CLOUDFLARE_API_TOKEN",
+          "default": ""
+        },
+        {
+          "name": "DOMAINS",
+          "label": "DOMAINS (Comma Separated List)",
+          "default": ""
+        },
+        {
+          "name": "PROXIED",
+          "label": "PROXIED",
+          "default": "true"
+        }
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "maintainer": " https://github.com/hoczeus"
+    },
+    {
+      "id": 2,
+      "type": 1,
       "name": "traefik",
       "title": "Traefik v3",
       "description": "Reverse Proxy with automatic SSL, Docker service discovery, and security plugins.",
-      "logo": "https://raw.githubusercontent.com/hoczeus/portainer-templates/refs/heads/main/img/svg/Traefik-Proxy.svg",
+      "logo": "https://raw.githubusercontent.com/hoczeus/portainer-templates/main/img/svg/Traefik-Proxy.svg",
       "image": "traefik:latest",
       "ports": [
           "80:80",
@@ -64,10 +97,6 @@
           {
               "name": "traefik.http.routers.api.tls.certresolver",
               "value": "letsencrypt-staging"
-          },
-          {
-              "name": "traefik.http.middlewares.auth.basicauth.users",
-              "value": "admin:$apr1$randomhash$Pq98dXhXJ13QzK.5z0q5O1"
           }
       ],
       "restart_policy": "always",
@@ -82,7 +111,7 @@
       "maintainer": "https://github.com/hoczeus"
     },
     {
-      "id": 2,
+      "id": 3,
       "type": 1,
       "name": "n8n",
       "title": "N8N",
