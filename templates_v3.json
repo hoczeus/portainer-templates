@@ -7,7 +7,7 @@
       "name": "cert-manager",
       "title": "Cert-Manager",
       "description": "Automatically manages and issues TLS certificates using Let's Encrypt.",
-      "logo": "https://cert-manager.io/images/cert-manager-logo.svg",
+      "logo": "https://raw.githubusercontent.com/hoczeus/portainer-templates/refs/heads/main/cert-manager-logo.svg",
       "image": "quay.io/jetstack/cert-manager-controller:v1.17.1",
       "volumes": [
           {
@@ -46,7 +46,7 @@
       "name": "traefik",
       "title": "Traefik v3",
       "description": "Reverse Proxy with automatic SSL, Docker service discovery, and security plugins.",
-      "logo": "https://doc.traefik.io/traefik/assets/images/logo-traefik.svg",
+      "logo": "https://raw.githubusercontent.com/hoczeus/portainer-templates/refs/heads/main/Traefik-Proxy.svg",
       "image": "traefik:latest",
       "ports": [
           "80:80",
@@ -120,7 +120,7 @@
       "id": 3,
       "type": 1,
       "name": "n8n",
-      "title": "n8n",
+      "title": "N8N",
       "description": "n8n allows you to build flexible workflows focused on deep data integration.",
       "logo": "https://n8n.io/n8n-logo.png",
       "image": "docker.n8n.io/n8nio/n8n:latest",
